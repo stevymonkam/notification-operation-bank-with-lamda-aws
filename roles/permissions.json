@@ -1,0 +1,62 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:DeleteItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:dynamodb:eu-west-1:312601499315:table/eazycarddb-dynamodb",
+                "arn:aws:dynamodb:eu-west-1:312601499315:table/eazycard-request-dynamodb"
+            ]
+        },
+        {
+            "Action": "secretsmanager:GetSecretValue",
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Action": "logs:CreateLogGroup",
+            "Effect": "Allow",
+            "Resource": "arn:aws:logs:eu-west-1:312601499315:*"
+        },
+        {
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:logs:eu-west-1:312601499315:log-group:/aws/lambda/my-lambda-function:*"
+            ]
+        },
+        {
+            "Action": [
+                "ses:SendEmail",
+                "ses:SendRawEmail"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
+            "Action": [
+                "ec2:CreateNetworkInterface",
+                "ec2:DetachNetworkInterface",
+                "ec2:DeleteNetworkInterface",
+                "ec2:AttachNetworkInterface",
+                "ec2:ModifyNetworkInterfaceAttribute",
+                "ec2:ResetNetworkInterfaceAttribute",
+                "ec2:DescribeNetworkInterfaces"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ],
+    "Version": "2012-10-17"
+}

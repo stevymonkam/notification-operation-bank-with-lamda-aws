@@ -1,0 +1,15 @@
+{
+    "action": "CREATE_CLIENT",
+    "data": {
+        "ClientID": "55145",
+        "Limit": 8000,
+        "Rate": "0.05",
+        "PaymentMethod": "Orange money",
+        "Currency": "EUR",
+        "FirstName": "Anselme",
+        "LastName": "Gildas",
+        "Email": "tataeazy@mailinator.com",
+        "Country": "Cameroon",
+        "Phone": "002365455678887776"
+    }
+}

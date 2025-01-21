@@ -1,0 +1,10 @@
+{
+    "action": "CARD_RECHARGE",
+    "data": {
+        "ClientID": "55145",
+        "Limit": 8000,
+        "Rate": "0.05",
+        "PaymentMethod": "Orange money",
+        "Currency": "EUR"
+    }
+}
